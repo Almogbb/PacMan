@@ -1,0 +1,68 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color:white;
+}
+
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* .formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+} */
+
+.container-game-over{
+  background-color: lightblue;
+  width: 200px;
+  height: 150px;
+  border: 3px white solid;
+  border-radius: 10px;
+  margin: auto;
+  /* background-attachment: fixed; */
+}
+
+
+.container-game-over h2{
+  color: chocolate;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -40px;
+}
+.container-victory{
+  background-color: rgb(230, 227, 86);
+  width: 200px;
+  height: 150px;
+  border: 3px white solid;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.container-victory h2{
+  color: chocolate;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -40px;
+}
+.btn{
+  cursor: pointer;
+  margin-top: 60px;
+  margin-left: 60px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.hide{
+  display: none;
+}
+
