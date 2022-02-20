@@ -1,0 +1,70 @@
+
+.edit-canvas{
+    display: none;
+}
+
+.meme-tools{
+    border-radius: 10px;
+    background: var(--clr11);
+    display: flex;
+    justify-content: space-evenly;
+    height: 70px;
+    align-items: center;
+    width: 340px;
+}
+
+.meme-tools >*{
+    width: 45px;
+}
+
+.btn-tools{
+    width: 1.5em;
+}
+
+.editor .social{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.editor .social .social-btn{
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 13px;
+    box-shadow: inset 0px -4px 4px;
+    font-size: 1.25em;
+    width: 10rem;
+    height: 4rem;
+    background:var(--clr11);
+    color: var(--clr6);
+    text-decoration: none;
+}
+
+.item5 .font-family{
+    background-color: #2e6ad8;
+    color: var(--clr2);
+    height: 50px;
+    width: 130px;
+    margin-inline-end: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10.5px;
+}
+
+.editor .btn-row .btn1 {
+   background-color: aqua;
+}
+
+.editor .btn-row .btn2 {
+   background-color: rgb(53, 199, 53);
+}
+
+.editor .btn-row .btn3 {
+    background-color: rgba(243, 43, 43, 0.63);
+}
+
+.active:active {
+    transform: translateY(5px);
+}

@@ -1,0 +1,66 @@
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: poppins, sans-serif;
+}
+body{
+    margin: 0;
+    background-color: var(--clr4);
+}
+
+.container{
+    max-width: 1500px;
+    margin: auto;
+}
+
+.image{
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+.grid-page{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 0.6fr 6fr 1fr 0.6fr;
+    gap: 6px;
+    grid-template-areas: 
+
+        "header     header      header"
+        "main       main        main"
+        "main       main        main"
+        "main       main        main";
+
+    height: 100vh;
+}
+
+.canvas-container{
+    border-radius: 15px;
+}
+
+.my-canvas{
+    background-color: white;
+    border-radius: 73px;
+    height: 100%;
+}
+
+.item5 .font-family .impact{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.item5 .font-family .poppins{
+    font-family: poppins,sans-serif;
+}
+
+.item5 .font-family .arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+

@@ -3,31 +3,87 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pacman</title>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Meme Generator</title>
 </head>
 
+<body onload="init()">
+    <section class="container">
+        <div class="grid-page">
+            <header class="header-container">
+                <div class="main-header main-layout flex space-between ">
+                    <h1 class="logo">Meme Generator</h1>
+                    <ul class="header-btn-row">
+                        <li class="header-btn active gallery" onclick="onGallery()">Gallery</li>
+                    </ul>
+                </div>
+            </header>
 
-<body onload="init()" onkeyup="movePacman(event)">
-    <h2>Score: <span>0</span></h2>
-    <div class="board-container"></div>
+            <main class="main main-layout">
+                <section class="edit-canvas">
+                    <div class="editor">
+                        <input name="INPUT" class="item1 meme-line-0 line" type="text" placeholder="Enter your line">
 
-    <div class="container-game-over hide">
-        <h2>Game Over</h2>
-        <button class="btn" onclick="restart()">Play Again</button>
-    </div>
+                        <div class="item2 btn-row">
+                            <button class="active btn btn1" onclick="onSwitchText()"><img class="btn-image-row"
+                                    src="ICONS/up-down.png"></button>
+                            <button class="active btn btn2" onclick="onAddLine()"><img class="btn-image-row"
+                                    src="ICONS/add.png"></button>
+                            <button class="active btn btn3" onclick="onClearCanvas()"><img class="btn-image-row"
+                                    src="ICONS/trash.png"></button>
+                        </div>
 
-    <div class="container-victory hide">
-        <h2>Victory</h2>
-        <button class="btn" onclick="restart()">Play Again</button>
-    </div>
+                        <div class="item3 meme-tools">
+                            <input type="color" id="font-color" name="font-color"
+                                oninput="onFontColorChange(this.value)">
+                            <button class="active btn" onclick="onFontSizeInc()"><img class="btn-tools"
+                                    src="ICONS/increase font.png"></button>
+                            <button class="active btn" onclick="onFontSizeDec()"><img class="btn-tools"
+                                    src="ICONS/decrease font.png"></button>
+                            <button class="active btn" onclick="onTextLocation('right')"><img class="btn-tools"
+                                    src="ICONS/align-to-left.png"></button>
+                            <button class="active btn" onclick="onTextLocation('center')"><img class="btn-tools"
+                                    src="ICONS/center-text.png"></button>
+                            <button class="active btn" onclick="onTextLocation('left')"><img class="btn-tools"
+                                    src="ICONS/align-to-right.png"></button>
+                        </div>
+                        <div class="item5 ">
+                            <!-- <input type="file" class="own-image" name="image" onchange="onImgInput(event)"> -->
+                            <select onchange="onFontFamily(this.value)" class="font-family">
+                                <option class="arial" value="Arial">Arial</option>
+                                <option class="poppins" value="poppins">Poppins</option>
+                                <option class="impact" value="impact">Impact</option>
+                            </select>
+                        </div>
+                        <div class="social item4">
+                            <a class="active social-btn" href="#" onclick="onDownloadCanvas(this)"
+                                download="myphoto">Download</a>
+                            <div class="share-modal"></div>
+                            <a class="social-share share active social-btn" href="#" onclick="onShareCanvas()">Share</a>
+                        </div>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas class="my-canvas" height="700" width="700"></canvas>
+                    </div>
+                </section>
 
-    <script src="js/utils.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/pacman.js"></script>
-    <script src="js/ghost.js"></script>
+                <section class="gallery-container">
+                    <section class="meme-images">
+
+                    </section>
+                </section>
+            </main>
+        </div>
+    </section>
+
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/utils-service.js"></script>
+    <script src="js/services/upload-service.js"></script>
+    <script src="js/services/meme-service.js"></script>
+    <script src="js/meme-controller.js"></script>
+    <script src="js/gallery-controller.js"></script>
 </body>
 
 </html>

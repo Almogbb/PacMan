@@ -1,0 +1,35 @@
+
+main{
+    grid-area: main;
+}
+
+.main{
+    background-color: var(--clr7);
+    margin: 10px 30px;
+    border-radius: 15px;
+}
+
+.main .meme-option{
+    width: 200px;
+    height: 200px;
+}
+
+.main .meme-images{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+  
+    gap: 10px;
+    padding: 20px 0;
+    width: auto;
+    margin: 0 20px;
+}
+
+.main .gallery-container .meme-images >*{
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: -3px 5px 8px rgb(36, 34, 34);
+}

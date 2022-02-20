@@ -1,0 +1,13 @@
+:root{
+    --clr1: rgba(89, 112, 193, 1);
+    --clr2: rgb(254, 254, 254);
+    --clr3: #21AC91;
+    --clr4: rgba(62, 75, 104, 1);
+    --clr5: linear-gradient(90deg, rgba(85,190,201,1) 27%, rgba(54,214,115,1) 77%);
+    --clr6: #FFFFFF;
+    --clr7: rgba(56, 59, 66, 1);
+    --clr8: rgba(141, 143, 152, 0.68);
+    --clr9: radial-gradient(circle, rgba(25,166,221,1) 30%, rgba(170,172,90,1) 92%);
+    --clr10: radial-gradient(circle, rgba(150,78,217,1) 2%, rgba(212,57,214,1) 100%);
+    --clr11:radial-gradient(circle, rgba(78,209,217,1) 2%, rgba(57,71,214,1) 100%);
+}
