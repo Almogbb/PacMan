@@ -32,9 +32,21 @@ function drawText(line) {
     gCtx.font = `${line.size}px ${line.font}`;
     gCtx.fillText(line.text, line.location.x, line.location.y);
     gCtx.strokeText(line.text, line.location.x, line.location.y);
+    // if (!line.text.length) return;
+}
+
+function drawBorder() {
+    const currLine = MEME.lines[MEME.selectedLineIdx];
+    const textWidth = gCtx.measureText(currLine.text).width;
+    console.log(textWidth);
+    gCtx.beginPath();
+    gCtx.rect(currLine.location.x - 800, currLine.location.y - 45, textWidth + 2000, currLine.size + 10);
+    gCtx.strokeStyle = 'black';
+    gCtx.stroke();
 }
 
 function onInsertText() {
+    const currLine = MEME.lines[MEME.selectedLineIdx];
     let textInput = document.querySelector(`.meme-line-0`).value;
     setLineText(textInput);
     drawText(MEME.lines[MEME.selectedLineIdx]);
@@ -144,10 +156,16 @@ function onSwitchText() {
     MEME.selectedLineIdx === MEME.lines.length - 1 ? MEME.selectedLineIdx = 0 : MEME.selectedLineIdx++;
     let currInput = document.querySelector(`.meme-line-0`);
     currInput.focus();
+    if (!MEME.lines[MEME.selectedLineIdx].text.length) return;
+    drawBorder()
+    setTimeout(() => {
+        renderMeme(MEME.selectedImgId)
+    }, 600);
 }
 
+
 function onAddLine() {
-    if (MEME.lines.length >= 2) return;
+    if (MEME.lines.length >= 3) return;
     getNewLine();
     renderMeme(MEME.selectedImgId);
 }
@@ -176,7 +194,6 @@ function loadImageFromInput(ev, onImageReady) {
         img.onload = onImageReady.bind(null, img);
         img.src = event.target.result;
     }
-    debugger
     const data = gElCanvas.toDataURL("image/jpeg");
     console.log('after');
     reader.readAsDataURL(ev.target.files[0]);

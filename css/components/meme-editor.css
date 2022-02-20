@@ -11,6 +11,7 @@
     height: 70px;
     align-items: center;
     width: 340px;
+    border: 1px solid #0000004a;
 }
 
 .meme-tools >*{
@@ -47,7 +48,8 @@
     width: 130px;
     margin-inline-end: 40px;
     border-radius: 10px;
-    border: 1px solid white;
+    border: 1px solid #ffffff52;
+    /* border: 1px solid #0000004a; */
     font-weight: bold;
     font-size: 1.2em;
     padding: 10.5px;

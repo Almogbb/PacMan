@@ -58,6 +58,10 @@
         text-align: center;
         list-style: none;
     }
+    
+    .main-header .gallery{
+        margin-inline-end: 50px;
+    }
 }
 
 @media (min-width:830px){
@@ -84,6 +88,10 @@
         margin-inline-end: 60px;
         color: var(--clr6);
         text-decoration: none;
+    }
+    
+    .main-header .gallery{
+        margin-inline-end: 50px;
     }
 
     .main-header .logo{
@@ -222,6 +230,10 @@
     .item4{
         grid-column:2/span 5;
         grid-row: 6;
+    }
+
+    .main-header .gallery{
+        margin-inline-end: 100px;
     }
 }
 
